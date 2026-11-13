@@ -38,6 +38,9 @@ h1 { margin: 0; font: 500 clamp(2rem, 9.2vw, 2.5rem)/1.1 var(--head); letter-spa
 h1 b { font-weight: 800; color: var(--mint); }
 .sub { margin: 10px 0 0; font-size: 1.0625rem; line-height: 1.45; color: #D8E8EA; text-wrap: balance; }
 
+.hero-img { margin: 20px 0 0; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); line-height: 0; }
+.hero-img img { display: block; width: 100%; height: auto; aspect-ratio: 1000 / 469; }
+
 /* page flow */
 main.pad { display: flex; flex-direction: column; gap: 34px; padding-block: 26px 10px; }
 h2 { margin: 0 0 8px; font: 700 1.625rem/1.2 var(--head); color: var(--navy); text-wrap: balance; }
