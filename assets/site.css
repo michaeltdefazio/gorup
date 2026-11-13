@@ -77,9 +77,6 @@ p { text-wrap: pretty; }
 .row b { display: block; font: 700 1.125rem/1.25 var(--head); color: var(--navy); }
 .row small { display: block; margin-top: 2px; font: 400 .9375rem/1.4 var(--body); color: var(--muted); }
 .row .chev { flex: none; margin-left: auto; width: 22px; height: 22px; fill: none; stroke: var(--teal); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-.soon { display: block; padding: 14px 16px 15px; border: 1px dashed #A9C4C8; border-radius: 14px; background: var(--soft); }
-.soon b { display: block; font: 700 1.0625rem/1.25 var(--head); color: var(--navy); }
-.soon span { display: block; margin-top: 3px; font-size: .9375rem; line-height: 1.4; color: var(--muted); }
 .more { margin: 0; text-align: center; color: var(--muted); font-size: .9375rem; }
 
 /* surgeon card */
