@@ -134,8 +134,9 @@ footer p { margin: 0; font-size: .875rem; line-height: 1.5; color: var(--muted);
 .seg { display: grid; grid-template-columns: 1fr 1fr; padding: 4px; gap: 4px; border: 2px solid var(--navy); border-radius: 14px; background: #fff; }
 .seg button { min-height: 50px; padding: 8px 10px; border: 0; border-radius: 10px; background: transparent; color: var(--navy); font: 700 1.125rem/1.2 var(--head); cursor: pointer; }
 .seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
-.panel-head { display: none; margin: 0 0 14px; }
-html:not(.js) .panel-head { display: block; }
+/* section titles: read aloud always, shown on screen only when the switch is not running */
+.panel-head { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+html:not(.js) .panel-head { position: static; width: auto; height: auto; margin: 0 0 14px; overflow: visible; clip: auto; white-space: normal; }
 main.pad:has(.seg-wrap) { padding-top: 0; gap: 0; }
 main.pad:has(.seg-wrap) > :not(.seg-wrap) { margin-top: 30px; }
 html:not(.js) main.pad:has(.seg-wrap) { padding-top: 26px; }
@@ -359,3 +360,26 @@ label.opt.on { background: var(--navy); border-color: var(--navy); color: #fff; 
   .print-only h1 { font-size: 16pt; }
   .mylist .print-only p { font-size: 9.5pt; }
 }
+
+/* ---- paper tools: printable worksheets, planners, medicine list ---- */
+/* print-at-home worksheets and planners */
+.paper { margin-top: 34px; }
+#visit-tool .paper { margin-top: 0; }
+.paper-sp { margin: 22px 0 10px; font: 700 1.125rem/1.2 var(--head); color: var(--navy); }
+.paper [data-paper]:first-of-type .paper-sp { margin-top: 4px; }
+.paper .gcard .what { font-size: .9375rem; letter-spacing: 0; text-transform: none; color: var(--navy); }
+
+.gwide { display: grid; grid-template-columns: 44% 1fr; gap: 12px; align-items: center; margin-top: 12px; padding: 10px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 1px 3px rgba(11,39,58,.08); text-decoration: none; color: var(--ink); }
+.gwide img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; object-position: top; border-radius: 8px; border: 1px solid var(--line); background: var(--soft); }
+.gwide .gw { display: flex; flex-direction: column; gap: 8px; }
+.gwide .what { display: block; font: 700 .9375rem/1.25 var(--head); color: var(--navy); }
+.gwide .gsub { display: block; margin: 0; text-wrap: balance; font-size: .9375rem; line-height: 1.35; color: var(--ink); }
+.gwide .go { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 54px; padding: 8px 10px; border-radius: 10px; background: var(--gold); color: var(--navy); font: 700 1.25rem/1.15 var(--head); text-align: center; }
+.gwide .go svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 374px) { .gwide .go { font-size: 1.125rem; padding-inline: 4px; } }
+
+.in-paper { margin: -14px 0 0; font-size: 1.0625rem; line-height: 1.4; color: var(--muted); }
+.in-paper a { color: var(--navy); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+#paper { scroll-margin-top: 70px; }
+.tabs a span { white-space: nowrap; }
+@media (max-width: 359px) { .tabs a { font-size: .75rem; padding-inline: 0; } }

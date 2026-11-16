@@ -20,6 +20,9 @@
     });
     carry.forEach(function (a) { a.setAttribute('href', a.getAttribute('data-carry') + '?spine=' + which); });
     carryGuide.forEach(function (a) { a.setAttribute('href', PAGE[which]); });
+    /* print cards belong to one part of the spine; the labels show only until one is chosen */
+    Array.prototype.forEach.call(document.querySelectorAll('[data-paper]'), function (el) { el.hidden = el.getAttribute('data-paper') !== which; });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-nospine]'), function (el) { el.hidden = true; });
   };
   window.spineFollow = follow;
 

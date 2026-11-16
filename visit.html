@@ -12,12 +12,12 @@
 <link rel="preload" href="assets/fonts/noto-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/rubik-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/rubik-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=6">
+<link rel="stylesheet" href="assets/site.css?v=7">
 </head>
 <body>
 <a class="skip" href="#main">Skip to the content</a>
 <div class="shell">
-<div class="topbar no-print"><div class="in pad"><a class="brand" href="index.html">Indiana Spine Group</a><a class="call-pill" href="tel:+17654465210" aria-label="Call Dr. Gorup’s office, 765-446-5210"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call</a></div></div>
+<nav class="topbar no-print" aria-label="Site"><div class="in pad"><a class="brand" href="index.html">Indiana Spine Group</a><a class="call-pill" href="tel:+17654465210" aria-label="Call Dr. Gorup’s office, 765-446-5210"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call</a></div></nav>
 <header class="hero no-print"><div class="pad">
   <p class="eyebrow">Dr. John Gorup</p>
   <h1>Make the visit <b>about you</b></h1>
@@ -26,6 +26,7 @@
 <main id="main" class="pad">
   <div class="intake" id="intake" data-doc="Dr. John Gorup" data-short="Dr. Gorup" data-contact="Indiana Spine Group · 765-446-5210 · 1345 Unity Place, Suite 310, Lafayette, IN 47905">
     <p class="in-lede no-print">This takes about five minutes. Pick one answer for each question, or skip any you are not sure about. At the bottom you get a one-page summary for the office. Print it, copy it or share it.</p>
+    <p class="in-paper no-print">Prefer paper? <a href="#paper">Print a worksheet instead.</a></p>
     <div class="in-progress no-print"><div class="bar"><i id="prog-bar"></i></div><p id="prog-txt" aria-live="polite">0 of 1 questions answered</p></div>
     <form id="intake-form" class="no-print" autocomplete="off" novalidate>
       <section class="q-sec" aria-labelledby="s0"><h2 id="s0">Which part of your spine?</h2>
@@ -54,6 +55,45 @@
     </section>
     <a class="floatlist no-print" id="float-sum" href="#summary" hidden>My summary</a>
 
+    <section class="paper no-print" id="paper" aria-labelledby="pp">
+      <h2 id="pp">Prefer paper?</h2>
+      <p class="lead">Print a worksheet and fill it in by hand. Bring it with you. The visit worksheets are two pages, front and back.</p>
+      <div data-paper="neck"><h3 class="paper-sp" data-nospine>Neck</h3>
+      <div class="gpick">
+        <a class="gcard" href="guides/visit-worksheet-neck.pdf" aria-label="Neck visit worksheet, PDF">
+          <img src="guides/visit-worksheet-neck-sm.jpg" width="480" height="384" alt="First page of the neck visit worksheet: where I feel it, my pain from 0 to 10, and what I have tried" loading="lazy">
+          <span class="what">Visit worksheet</span>
+          <span class="go">Open PDF<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
+        </a>
+        <a class="gcard" href="guides/recovery-planner-neck.pdf" aria-label="Neck recovery planner, PDF">
+          <img src="guides/recovery-planner-neck-sm.jpg" width="480" height="384" alt="First page of the neck recovery planner: a general timeline with room for your own dates and notes" loading="lazy">
+          <span class="what">Recovery planner</span>
+          <span class="go">Open PDF<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
+        </a>
+      </div>
+      </div>
+      <div data-paper="lower-back"><h3 class="paper-sp" data-nospine>Low back</h3>
+      <div class="gpick">
+        <a class="gcard" href="guides/visit-worksheet-lower-back.pdf" aria-label="Low back visit worksheet, PDF">
+          <img src="guides/visit-worksheet-lower-back-sm.jpg" width="480" height="384" alt="First page of the low back visit worksheet: where I feel it, my pain from 0 to 10, and what I have tried" loading="lazy">
+          <span class="what">Visit worksheet</span>
+          <span class="go">Open PDF<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
+        </a>
+        <a class="gcard" href="guides/recovery-planner-lower-back.pdf" aria-label="Low back recovery planner, PDF">
+          <img src="guides/recovery-planner-lower-back-sm.jpg" width="480" height="384" alt="First page of the low back recovery planner: a general timeline with room for your own dates and notes" loading="lazy">
+          <span class="what">Recovery planner</span>
+          <span class="go">Open PDF<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
+        </a>
+      </div>
+      </div>
+      <div class="paper-any"><h3 class="paper-sp" data-nospine>For any visit</h3>
+        <a class="gwide" href="guides/medicine-list.pdf" aria-label="Medicine list, PDF">
+          <img src="guides/medicine-list-sm.jpg" width="480" height="384" alt="First page of the medicine list: a table for each medicine, dose, how often and what it is for" loading="lazy">
+          <span class="gw"><span class="what">Medicine list</span><span class="gsub">Write down what you take.</span><span class="go">Open PDF<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></span>
+        </a>
+      </div>
+    </section>
+
     <section class="call no-print" aria-labelledby="q">
       <h2 id="q">Questions?</h2>
       <p>Call Dr.&nbsp;Gorup’s team.</p>
@@ -65,7 +105,7 @@
 <footer class="no-print pad"><p>This guide is for education and does not replace advice from your doctor. Results vary. Averages describe earlier patients and cannot predict your result.</p><p>General information for patients. It does not replace advice from your surgeon.</p></footer>
 </div>
 <nav class="tabs no-print" aria-label="Main"><a data-tab="home" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/></svg><span>Home</span></a><a data-tab="guide" href="index.html#guides"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v15H5.5c-.8 0-1.5-.7-1.5-1.5z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v15h5.5c.8 0 1.5-.7 1.5-1.5z"/></svg><span>Guide</span></a><a data-tab="results" href="results.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-9"/><path d="M12 20V5"/><path d="M19 20v-6"/><path d="M3 20h18"/></svg><span>Results</span></a><a data-tab="recovery" href="recovery.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 6H15a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h6.8"/></svg><span>Recovery</span></a><a data-tab="visit" href="visit.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 6.5 1.6 1.6L8.5 5"/><path d="M11.5 6.5H20"/><path d="m4 13.5 1.6 1.6 2.9-3.1"/><path d="M11.5 13.5H20"/><path d="M11.5 19H20"/></svg><span>Visit form</span></a></nav>
-<script src="assets/site.js?v=6" defer></script>
+<script src="assets/site.js?v=7" defer></script>
 <script src="assets/intake.js?v=1" defer></script>
 </body>
 </html>
