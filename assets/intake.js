@@ -58,7 +58,7 @@
     var sets = all('fieldset[data-count]').filter(function (f) { return !f.closest('[hidden]'); });
     var done = sets.filter(function (f) { return f.querySelector('input:checked'); }).length;
     bar.style.width = (sets.length ? Math.round(100 * done / sets.length) : 0) + '%';
-    progTxt.textContent = done + ' of ' + sets.length + ' questions answered';
+    progTxt.textContent = done + ' of ' + sets.length + (sets.length === 1 ? ' question answered' : ' questions answered');
   };
 
   /* ---- which part of the spine: the form, the tab links and the summary follow it ---- */
